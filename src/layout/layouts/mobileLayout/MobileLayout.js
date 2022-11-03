@@ -1,13 +1,11 @@
 import React, { Suspense, useRef, useState } from 'react';
-import { useLocation, useRoutes } from 'react-router-dom';
+import { useRoutes } from 'react-router-dom';
 import { mobileLayoutContext } from 'contexts';
 import Main from 'main/mobile';
 import { mobileRoutes } from 'routes';
 import { motion } from 'framer-motion';
 
 const MobileLayout = () => {
-  const location = useLocation();
-
   const [transitionDirection, setTransitionDirection] = useState('up');
   const [isTransitionCompleted, setIsTransitionCompleted] = useState(true);
 
