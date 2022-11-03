@@ -1,10 +1,7 @@
 import React, { useContext } from 'react';
-import { useLocation } from 'react-router-dom';
 import { systemContext } from 'contexts';
 
 const HeaderA = () => {
-  const location = useLocation();
-
   const { appBarTitle } = useContext(systemContext);
 
   return (
