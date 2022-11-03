@@ -55,6 +55,5 @@
     "transformIgnorePatterns": [
       "/node_modules/(?!swiper|ssr-window|dom7)"
     ]
-  },
-  "homepage": "http://ggobugi1986.github.io/happy-mentor-web"
+  }
 }
