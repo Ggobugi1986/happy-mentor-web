@@ -1,1 +1,1 @@
-export { default } from './PostEvents';
+export { default } from './PastEvents';

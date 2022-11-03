@@ -14,7 +14,7 @@ const LearningNews = () => {
   return (
     <div className="mb-8">
       <SectionHeader {...sectionHeaderProps} />
-      <News type="event" news={news['eventNews']} />
+      <News {...news['learning']} />
     </div>
   );
 };

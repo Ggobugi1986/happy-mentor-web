@@ -1,11 +1,11 @@
-import eventNews from './eventNews';
-import learningNews from './learningNews';
-import mukoNews from './mukoNews';
+import event from './event';
+import happyMentor from './happyMentor';
+import learning from './learning';
 
 const news = {
-  eventNews,
-  learningNews,
-  mukoNews,
+  event,
+  happyMentor,
+  learning,
 };
 
 export default news;

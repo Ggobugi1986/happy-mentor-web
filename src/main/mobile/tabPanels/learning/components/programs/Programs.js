@@ -12,10 +12,9 @@ const Programs = () => {
   };
 
   return (
-    <div className="mb-4">
+    <div className="mb-8">
       <SectionHeader {...sectionHeaderProps} />
-
-      <Posters type="learning" posters={programs['learningPrograms']} />
+      <Posters {...programs['learning']} />
     </div>
   );
 };

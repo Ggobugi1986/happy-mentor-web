@@ -13,9 +13,9 @@ const Articles = () => {
   };
 
   return (
-    <div className="mb-4">
+    <div className="mb-8">
       <SectionHeader {...sectionHeaderProps} />
-      <div className="flex pl-4 space-x-4 overflow-x-scroll">
+      <div className="flex pl-4 space-x-3 overflow-x-scroll">
         {articles.map((article) => (
           <div
             key={article.id}
@@ -28,13 +28,12 @@ const Articles = () => {
               </div>
             </div>
 
-            <div className="h-16 mb-2 overflow-hidden">
-              <img
-                src={`/assets/articleImages/${article.id}/1.jpeg`}
-                alt=""
-                className="grayscale"
-              />
-            </div>
+            <div
+              style={{
+                backgroundImage: `url('/assets/articles/${article.id}/1.jpeg')`,
+              }}
+              className="h-16 mb-2 bg-cover bg-center grayscale"
+            />
 
             <div className="mb-1">
               <div className="text-sm font-bold text-slate-900 truncate">
@@ -42,9 +41,9 @@ const Articles = () => {
               </div>
             </div>
 
-            <div className="mb-4">
-              <div className="text-xs font-semibold text-slate-500 truncate">
-                {article.subtitle}
+            <div className="h-16 mb-4">
+              <div className="text-xs font-semibold text-slate-500">
+                {article.description}
               </div>
             </div>
 
@@ -55,7 +54,7 @@ const Articles = () => {
           </div>
         ))}
 
-        <div className="flex-none w-2" />
+        <div className="flex-none w-1" />
       </div>
     </div>
   );

@@ -5,9 +5,9 @@ import { useLinkClick, usePage } from 'hooks/mobile';
 import { HeaderB, PaperB } from 'ui/mobile';
 
 const Program = () => {
-  const { type, id } = useParams();
+  const { category, id } = useParams();
 
-  const program = programs[`${type}Programs`].find(
+  const program = programs[category].programs.find(
     (program) => program.id === id
   );
 
@@ -15,7 +15,7 @@ const Program = () => {
   const handleLinkCliek = useLinkClick();
 
   useEffect(() => {
-    initializePage('소식');
+    initializePage('프로그램');
   }, [initializePage]);
 
   const headerBProps = {
@@ -31,7 +31,7 @@ const Program = () => {
       <HeaderB {...headerBProps} />
       <div className="absolute inset-0 top-14 overflow-y-scroll">
         <div className="mb-4">
-          <img src={`/assets/${type}Posters/${program.id}.jpeg`} alt="" />
+          <img src={`/assets/posters/${category}/${program.id}.jpeg`} alt="" />
         </div>
 
         {program.description && (

@@ -1,4 +1,4 @@
-import MukoNews from './mukoNews';
+import HappyMentorNews from './happyMentorNews';
 import Notices from './notices';
 
-export { MukoNews, Notices };
+export { HappyMentorNews, Notices };

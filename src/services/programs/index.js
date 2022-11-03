@@ -5,14 +5,14 @@ const ProgramMobile = lazy(() => import('./mobile/pages/program'));
 
 export const programsDesktopRoutes = [
   {
-    path: '/programs/:type/:id',
+    path: '/programs/:category/:id',
     element: <ProgramDesktop />,
   },
 ];
 
 export const programsMobileRoutes = [
   {
-    path: '/programs/:type/:id',
+    path: '/programs/:category/:id',
     element: <ProgramMobile />,
   },
 ];

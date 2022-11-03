@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { usePage } from 'hooks/mobile';
 import { HeaderA, TabsA } from 'ui/mobile';
 import { changeActiveTab } from 'store/slices/uiSlice';
-import { About, Event, Learning, Now, Store } from './tabPanels';
+import { About, Counseling, Event, Learning, Now, Store } from './tabPanels';
 
 const Main = () => {
   const { activeTab } = useSelector((state) => state.ui);
@@ -58,6 +58,7 @@ const Main = () => {
       <HeaderA />
       <TabsA {...tabsAProps} />
       {activeTab === 'about' && <About />}
+      {activeTab === 'counseling' && <Counseling />}
       {activeTab === 'event' && <Event />}
       {activeTab === 'learning' && <Learning />}
       {activeTab === 'now' && <Now />}

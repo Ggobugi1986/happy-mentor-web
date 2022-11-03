@@ -1,21 +1,11 @@
 import React from 'react';
+import notices from 'data/notices';
+import { useLinkClick } from 'hooks/mobile';
 import { SectionHeader } from 'ui/mobile';
+import { FiChevronRight } from 'react-icons/fi';
 
 const Notices = () => {
-  const notices = [
-    {
-      id: 1,
-      title: 'AR/메타버스 개념이해교육',
-    },
-    {
-      id: 2,
-      title: '평생교육사 실습생 모집',
-    },
-    {
-      id: 3,
-      title: '도시재생큐레이터 2급 자격증 과정',
-    },
-  ];
+  const handleLinkClick = useLinkClick();
 
   const sectionHeaderProps = {
     title: '공지사항',
@@ -26,11 +16,20 @@ const Notices = () => {
     <div className="mb-8">
       <SectionHeader {...sectionHeaderProps} />
 
-      {notices.map((notice) => (
-        <div key={notice.id} className="px-4">
-          <div className="mb-2">
-            <div className="text-slate-900">{notice.title}</div>
-          </div>
+      {notices['happyMentor'].notices.map((notice) => (
+        <div
+          key={notice.id}
+          className="flex justify-between mb-2 px-4"
+          onClick={() =>
+            handleLinkClick(
+              `/notices/happyMentor/${notice.id}`,
+              '공지사항',
+              'up'
+            )
+          }
+        >
+          <div className="text-slate-900 truncate">{notice.title}</div>
+          <FiChevronRight className="text-slate-500" />
         </div>
       ))}
     </div>

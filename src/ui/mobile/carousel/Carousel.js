@@ -61,7 +61,11 @@ const Carousel = ({ slides }) => {
               </div>
             </motion.div>
 
-            <img alt="" className="absolute top-8 right-4 w-32" />
+            <img
+              src={`assets/${slide.type}Posters/${slide.poster}`}
+              alt=""
+              className="absolute top-8 right-4 w-32"
+            />
 
             {slide.image && <Image image={slide.image} />}
           </div>

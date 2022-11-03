@@ -1,7 +1,7 @@
 import React from 'react';
 import { Footer, PaperA } from 'ui/mobile';
 import Board from './board';
-import { MukoNews, Notices } from './components';
+import { HappyMentorNews, Notices } from './components';
 
 const Now = () => {
   return (
@@ -9,7 +9,7 @@ const Now = () => {
       <Board />
       <PaperA>
         <Notices />
-        <MukoNews />
+        <HappyMentorNews />
         <Footer />
       </PaperA>
     </div>

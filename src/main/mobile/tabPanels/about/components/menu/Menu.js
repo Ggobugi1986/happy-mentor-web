@@ -1,8 +1,6 @@
-// Import React
 import React from 'react';
 
 const Menu = () => {
-  // Set Data
   const menu = [
     {
       label: '비전 & 미션',
@@ -22,7 +20,7 @@ const Menu = () => {
     <div className="flex flex-wrap p-3 mb-4">
       {menu.map((menuItem, index) => (
         <div key={index} className="flex-none w-1/2 h-12 p-1">
-          <div className="h-full flex items-center justify-center border border-gray-300 rounded bg-gray-200">
+          <div className="h-full flex items-center justify-center border border-slate-100 rounded bg-slate-50">
             <div className="font-semibold text-slate-900">{menuItem.label}</div>
           </div>
         </div>

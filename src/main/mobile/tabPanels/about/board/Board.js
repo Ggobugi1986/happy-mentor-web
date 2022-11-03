@@ -6,7 +6,7 @@ const Board = () => {
 
   return (
     <div
-      className="flex-none relative flex flex-col items-center justify-center bg-gray-100"
+      className="flex-none flex items-center justify-center bg-gray-50"
       style={{ height: boardHeight }}
     >
       <img src="/assets/logos/logo1.png" alt="" className="w-60" />

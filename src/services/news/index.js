@@ -5,14 +5,14 @@ const NewsItemMobile = lazy(() => import('./mobile/pages/newsItem'));
 
 export const newsDesktopRoutes = [
   {
-    path: '/news/:type/:id',
+    path: '/news/:category/:id',
     element: <NewsItemDesktop />,
   },
 ];
 
 export const newsMobileRoutes = [
   {
-    path: '/news/:type/:id',
+    path: '/news/:category/:id',
     element: <NewsItemMobile />,
   },
 ];
