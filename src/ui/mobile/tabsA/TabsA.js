@@ -16,7 +16,6 @@ const TabsA = ({ activeTab, tabs, layoutId }) => {
   return (
     <motion.div className="fixed inset-x-0 top-14 h-12 bg-white z-50">
       <img
-        src={require('assets/logos/logo2.png')}
         alt=""
         className="fixed top-3 left-2 w-60 z-50"
         onClick={() => {
