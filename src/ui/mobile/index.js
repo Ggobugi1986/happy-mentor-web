@@ -5,7 +5,7 @@ import HeaderB from './headerB';
 import News from './news';
 import PaperA from './paperA';
 import PaperB from './paperB';
-import Posters from './posters';
+import Programs from './programs';
 import SectionHeader from './sectionHeader';
 import TabsA from './tabsA';
 import TabsB from './tabsB';
@@ -18,7 +18,7 @@ export {
   News,
   PaperA,
   PaperB,
-  Posters,
+  Programs,
   SectionHeader,
   TabsA,
   TabsB,

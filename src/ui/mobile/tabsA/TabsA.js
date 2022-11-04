@@ -5,6 +5,7 @@ import { useLinkClick } from 'hooks/mobile';
 import { changeActiveTab } from 'store/slices/uiSlice';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import { isBrowser } from 'react-device-detect';
 
 const TabsA = ({ activeTab, tabs, layoutId }) => {
   const location = useLocation();
@@ -15,7 +16,7 @@ const TabsA = ({ activeTab, tabs, layoutId }) => {
 
   return (
     <motion.div
-      className="fixed inset-x-0 top-14 h-12 border-b border-slate-300 z-50"
+      className="fixed inset-x-0 top-14 h-12 border-b border-slate-300 z-50 max-w-4xl mx-auto"
       style={{
         backgroundColor:
           location.pathname === '/' ? '#FFFFFF' : 'rgb(15 23 42)',
@@ -29,7 +30,8 @@ const TabsA = ({ activeTab, tabs, layoutId }) => {
       <img
         src="/assets/logos/logo2.png"
         alt=""
-        className="fixed top-3 left-2 w-60"
+        className="absolute left-2 w-60"
+        style={{ top: -44 }}
         onClick={() => {
           dispatch(changeActiveTab('now'));
           handleLinkClick(
@@ -40,7 +42,12 @@ const TabsA = ({ activeTab, tabs, layoutId }) => {
         }}
       />
 
-      <div className="h-full flex justify-between pr-2 pl-10">
+      <div
+        className={clsx(
+          'h-full flex justify-between',
+          isBrowser ? 'px-16' : 'pr-2 pl-10'
+        )}
+      >
         {tabs.map((tab) => (
           <div key={tab.id} className="relative flex items-center">
             <div className="px-2 py-1 rounded" onClick={tab.action}>

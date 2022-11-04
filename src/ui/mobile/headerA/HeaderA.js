@@ -10,7 +10,7 @@ const HeaderA = () => {
 
   return (
     <motion.div
-      className="fixed inset-x-0 top-0 h-14 flex items-center px-2 z-50"
+      className="fixed inset-x-0 top-0 h-14 flex items-center px-2 z-50 max-w-4xl mx-auto"
       style={{
         backgroundColor:
           location.pathname === '/' ? '#FFFFFF' : 'rgb(15 23 42)',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { layoutContext } from 'contexts';
-import { DesktopLayout, MobileLayout } from './layouts';
+import { MobileLayout } from './layouts';
 import { isBrowser } from 'react-device-detect';
 
 const Layout = () => {
@@ -8,7 +8,8 @@ const Layout = () => {
 
   return (
     <layoutContext.Provider value={value}>
-      {isBrowser ? <DesktopLayout /> : <MobileLayout />}
+      <div className="fixed absolute inset-0 bg-slate-100" />
+      {isBrowser ? <MobileLayout /> : <MobileLayout />}
     </layoutContext.Provider>
   );
 };

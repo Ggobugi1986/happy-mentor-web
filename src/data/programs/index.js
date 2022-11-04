@@ -1,9 +1,11 @@
 import event from './event';
-import learning from './learning';
+import learning1 from './learning1';
+import learning2 from './learning2';
 
 const programs = {
   event,
-  learning,
+  learning1,
+  learning2,
 };
 
 export default programs;

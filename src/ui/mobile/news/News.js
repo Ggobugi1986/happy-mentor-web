@@ -21,6 +21,7 @@ const News = ({ category, news }) => {
 
   return news.map((newsItem) => (
     <div
+      key={newsItem.id}
       className="flex mb-2 px-4 space-x-4"
       onClick={() =>
         handleLinkClick(`/news/${category}/${newsItem.id}`, title, 'up')

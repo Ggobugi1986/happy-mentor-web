@@ -74,7 +74,7 @@ const Partners = () => {
       <SectionHeader {...sectionHeaderProps} />
       <div className="flex flex-wrap">
         {partners.map((partner) => (
-          <div key={partner.id} className="w-1/2 h-20 p-4">
+          <div key={partner.id} className="w-1/2 h-24 p-4">
             <img src={`/assets/partners/${partner.id}.jpeg`} alt="" />
           </div>
         ))}

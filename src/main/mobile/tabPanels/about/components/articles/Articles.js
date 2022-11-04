@@ -41,7 +41,7 @@ const Articles = () => {
               </div>
             </div>
 
-            <div className="h-16 mb-4">
+            <div className="h-16 mb-4 overflow-hidden">
               <div className="text-xs font-semibold text-slate-500">
                 {article.description}
               </div>
@@ -55,6 +55,15 @@ const Articles = () => {
         ))}
 
         <div className="flex-none w-1" />
+      </div>
+
+      <div className="px-4 pt-4">
+        <div
+          className="h-8 flex items-center justify-center border border-slate-500 rounded"
+          onClick={() => handleLinkClick(`/articles`, '언론 기사', 'up')}
+        >
+          <div className="font-semibold text-slate-500">+ 모두 보기</div>
+        </div>
       </div>
     </div>
   );

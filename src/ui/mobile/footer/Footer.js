@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className="px-4">
-      <div className="mb-4 bg-slate-500" style={{ height: 1 }} />
+      <div className="mb-4 bg-slate-300" style={{ height: 1 }} />
       <div className="mb-4">
         <div className="text-sm font-bold text-slate-900">해피멘토협동조합</div>
       </div>

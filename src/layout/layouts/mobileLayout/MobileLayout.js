@@ -19,9 +19,6 @@ const MobileLayout = () => {
 
   const value = {
     clientWidth: ref.current.clientWidth,
-    clientHeight: ref.current.clientHeight,
-
-    boardHeight: ((ref.current.clientWidth - 24) / 3) * 2 + 24,
 
     transitionDirection,
     setTransitionDirection,
@@ -33,7 +30,7 @@ const MobileLayout = () => {
     <mobileLayoutContext.Provider value={value}>
       <motion.div
         ref={ref}
-        className="fixed inset-0 overflow-x-hidden overflow-y-scroll"
+        className="fixed inset-0 overflow-x-hidden overflow-y-scroll max-w-4xl mx-auto"
         style={{
           backgroundColor:
             location.pathname === '/' ? '#FFFFFF' : 'rgb(15 23 42)',
@@ -49,7 +46,7 @@ const MobileLayout = () => {
 
         {!isTransitionCompleted && (
           <motion.div
-            className="fixed inset-x-0 bottom-0 rounded-t-2xl bg-white z-50"
+            className="fixed inset-x-0 bottom-0 rounded-t-2xl bg-white z-50 max-w-4xl mx-auto"
             style={{
               top: transitionDirection === 'up' ? ref.current.clientHeight : 56,
             }}

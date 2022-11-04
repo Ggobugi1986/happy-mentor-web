@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import news from 'data/news';
 import { useLinkClick, usePage } from 'hooks/mobile';
 import { HeaderB, PaperB } from 'ui/mobile';
+import { Content } from '../../sharedComponents';
 
 const NewsItem = () => {
   const { category, id } = useParams();
-
-  const newsItem = news[category].news.find((newsItem) => newsItem.id === id);
 
   const initializePage = usePage();
   const handleLinkCliek = useLinkClick();
@@ -36,46 +34,11 @@ const NewsItem = () => {
     },
   };
 
-  let type;
-
-  if (newsItem.type === 'partner') {
-    type = '업무협약';
-  } else if (newsItem.type === 'review') {
-    type = '후기';
-  } else {
-    type = '기타';
-  }
-
   return (
     <PaperB>
       <HeaderB {...headerBProps} />
-      <div className="absolute inset-0 top-14 overflow-y-scroll">
-        <div
-          style={{
-            backgroundImage: `url('/assets/news/${category}/${newsItem.id}/1.jpeg')`,
-          }}
-          className="h-60 mb-4 bg-cover bg-center"
-        />
-
-        <div className="mb-4 px-4">
-          <div className="mb-2">
-            <div className="font-medium text-slate-700">{type}</div>
-          </div>
-
-          <div className="mb-2">
-            <div className="text-lg font-semibold text-slate-900">
-              {newsItem.title}
-            </div>
-          </div>
-
-          <div className="flex justify-end mb-4">
-            <div className="text-sm text-slate-500">{newsItem.date}</div>
-          </div>
-
-          <div className="text-slate-900 text-justify">
-            <div dangerouslySetInnerHTML={{ __html: newsItem.description }} />
-          </div>
-        </div>
+      <div className="absolute inset-0 top-14 pt-8 overflow-y-scroll">
+        <Content category={category} id={id} />
       </div>
     </PaperB>
   );

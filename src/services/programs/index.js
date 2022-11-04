@@ -1,6 +1,7 @@
 import { lazy } from 'react';
 
 const ProgramDesktop = lazy(() => import('./desktop/pages/program'));
+const ProgramsMobile = lazy(() => import('./mobile/pages/programs'));
 const ProgramMobile = lazy(() => import('./mobile/pages/program'));
 
 export const programsDesktopRoutes = [
@@ -11,6 +12,10 @@ export const programsDesktopRoutes = [
 ];
 
 export const programsMobileRoutes = [
+  {
+    path: '/programs/:category',
+    element: <ProgramsMobile />,
+  },
   {
     path: '/programs/:category/:id',
     element: <ProgramMobile />,
